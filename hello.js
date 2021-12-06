@@ -3,6 +3,7 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+const PORT = process.env.PORT || 5000
 
 http.createServer(function (req,res){
 	var q = url.parse(req.url,true);
@@ -23,7 +24,7 @@ fs.readFile(filename, function (err,data){
     return res.end();
     
 })
-}).listen(8080);
+}).listen(PORT);
 console.log('Server listening on Port 8080...');
 
 //console.log ('Hello World');
@@ -31,6 +32,7 @@ console.log('Server listening on Port 8080...');
 git bash:
 node hello.js (to start on git bash with node and select file to read from)
 ctr + c (to close server and start new one with updated code by putting up arrow)
+cd /c/nodefiles (to change directory)
 */
 /*
 node.js/javascript:
